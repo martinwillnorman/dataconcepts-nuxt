@@ -1,0 +1,261 @@
+@import './base/variables'
+@import './base/reboot'
+
+.slant::after
+  content: ' '
+  position: absolute
+  top: -5%
+  left: -50%
+  height: 53%
+  z-index: -1
+  transform: skewY(-5deg)
+  overflow: hidden
+  width: 300vw
+  background: linear-gradient(to bottom,#eee 0%,#fff 62%)
+
+.slant-2::after
+  content: ' '
+  position: absolute
+  top: 15%
+  left: -50%
+  height: 53%
+  z-index: -1
+  transform: skewY(-6deg)
+  overflow: hidden
+  width: 300vw
+  background: linear-gradient(to bottom,#eee 0%,#fff 62%)
+
+.slant-3::after
+  content: ' '
+  position: absolute
+  top: -150px
+  left: -50%
+  height: 53%
+  z-index: -1
+  transform: skewY(-5deg)
+  overflow: hidden
+  width: 300vw
+  background: linear-gradient(to bottom,#eee 0%,#fff 62%)
+
+.slant-4::after
+  content: ' '
+  position: absolute
+  top: 150px
+  left: -50%
+  height: 53%
+  z-index: -1
+  transform: skewY(7deg)
+  overflow: hidden
+  width: 300vw
+  background: linear-gradient(to bottom,#eee 0%,#fff 62%)
+
+.slant-5::after
+  content: ' '
+  position: absolute
+  top: -20%
+  left: -50%
+  height: 55%
+  z-index: -1
+  transform: skewY(-12deg)
+  overflow: hidden
+  width: 300vw
+  background: linear-gradient(to bottom,#eee 0%,#fff 62%)
+
+.text-white
+  color: #fff !important
+
+.text-black
+  color: #000 !important
+
+.reg-link
+  font: 
+    size: 0.9rem
+    weight: 600
+  position: relative
+  letter-spacing: 0.5px 
+  display: inline-block
+  margin-top: 15px
+
+.reg-link::after
+  content: ""
+  position: absolute
+  top: 100%
+  left: 0
+  height: 1px
+  width: 100%
+  transform: translatey(10px)
+  opacity: 0
+  transition: transform 400ms cubic-bezier(.29,.29,.42,1.01), opacity 600ms ease-in-out, color 600ms ease-in-out
+
+.reg-link:hover:after
+  opacity: 1
+  transform: translatey(2px)
+
+.reg-link.margin
+  margin-top: 20px  
+
+.reg-link.white
+  color: #fff
+
+.reg-link.white::after
+  background: #fff
+
+.content-holder
+  min-height: 100%
+  width: 100%
+  background-color: transparent
+
+.hide-overflow
+  overflow: hidden
+
+.sections
+  overflow-y: hidden
+  overflow-x: hidden
+
+#dataconcepts 
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  font: 
+    size: 18px
+  min-height: 100%
+  box-sizing: border-box
+  line-height: 1.2
+
+#dataconcepts:focus
+  outline: none !important
+
+.container
+  margin-left: auto
+  margin-right: auto
+  padding: 0 1.66667rem
+  max-width: 1230px
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+
+.container-fullwidth
+  padding: 0 1.66667rem
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+
+.row
+  margin-left: -.83333rem
+  margin-right: -.83333rem
+  flex: auto
+  width: 100%
+  display: flex
+  flex-flow: row wrap
+  position: relative
+
+.row.right
+  justify-content: flex-end
+
+.padded
+  padding: 100px 0
+
+.padded-large
+  padding: 140px 0
+
+.padded-bottom
+  padding: 0 0 100px
+
+.padded-top
+  padding: 100px 0 0
+
+.subsection-padding
+  padding-bottom: 60px
+
+.column
+  padding-right: .83333rem
+  padding-left: .83333rem
+  box-sizing: border-box
+
+.column.centered
+  margin-left: auto
+  margin-right: auto
+
+.column.end-content
+  display: flex
+  align-items: flex-end
+
+.column.center-content
+  align-items: center
+  display: flex
+
+.column.center-horizontal
+  display: flex
+  justify-content: center
+
+.column.flex
+  display: flex
+  flex-wrap: wrap
+
+.col-12 
+  width: 100%
+  max-width: 100%
+  flex-basis: 100%
+
+.col-11
+  width: 91.66667%
+  max-width: 91.66667%
+  flex-basis: 91.66667%
+
+.col-10
+  width: 83.33333%
+  max-width: 83.33333%
+  flex-basis: 83.33333%
+
+.col-9
+  width: 75%
+  max-width: 75%
+  flex-basis: 75%
+
+.col-8
+  width: 66.66667%
+  max-width: 66.66667%
+  flex-basis: 66.66667%
+
+.col-7
+  width: 58.33333%
+  max-width: 58.33333%
+  flex-basis: 58.33333%
+
+.col-6
+  width: 50%
+  max-width: 50%
+  flex-basis: 50%
+
+.col-5
+  width: 41.66667%
+  max-width: 41.66667%
+  flex-basis: 41.66667%
+
+.col-4
+  width: 33.33333%
+  max-width: 33.33333%
+  flex-basis: 33.33333%
+
+.col-3
+  width: 25%
+  max-width: 25%
+  flex-basis: 25%
+
+.col-2
+  width: 16.66667%
+  max-width: 16.66667%
+  flex-basis: 16.66667%
+
+.col-1
+  width: 8.33333%
+  max-width: 8.33333%
+  flex-basis: 8.33333%
+
+.content-block
+  display: flex
+  position: relative
+  width: 100%
+
+.content-wrapper 
+  position: relative
+  width: 100%
