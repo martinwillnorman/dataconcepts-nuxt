@@ -10,12 +10,23 @@ module.exports = {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "Nuxt.js project" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        href:
+          "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Quattrocento+Sans:400,700",
+        rel: "stylesheet"
+      }
+    ]
   },
   /*
    ** Customize the progress bar color
    */
   loading: { color: "#3B8070" },
+
+  modules: [
+    ["nuxt-sass-resources-loader", ["assets/css/base/_variables.sass"]]
+  ],
   /*
    ** Build configuration
    */

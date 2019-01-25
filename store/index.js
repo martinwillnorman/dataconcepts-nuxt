@@ -19,7 +19,7 @@ class WpApi {
   }
 }
 
-const wp = new WpApi("http://localhost:8888/wordpress");
+const wp = new WpApi("http://localhost:8888/");
 
 const createStore = () => {
   return new Vuex.Store({

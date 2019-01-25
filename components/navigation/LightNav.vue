@@ -3,9 +3,9 @@
     <div class="container">
       <nav data-aos="fade-down" data-aos-duration="500">
         <div class="nav__content">
-          <nuxt-link class="logo" v-bind:class="{ active: showMobileMenu }" to="/">concepts</nuxt-link>
+          <nuxt-link class="logo" v-bind:class="{ active: showMobileMenu }" to="/">dataconcepts</nuxt-link>
           <div class="link-container">
-            <ul class="standard-nav-holder">
+            <ul class="standard-nav-holder pseudo">
               <li>
                 <nuxt-link v-on:click.native="myFilter" to="/work">Work</nuxt-link>
               </li>
@@ -102,17 +102,12 @@ nav
 .logo 
   color: #fff
   font:
-    size: 1.8rem
-    weight: 900
-  transition: color 1s cubic-bezier(0.23, 1, 0.32, 1)
-  letter-spacing: 2px
+    size: 1.5rem
+    weight: 700
+    family: $font-family-header
 
 .logo.active
   color: #000
-
-.logo::before
-  content: "data"
-  color: #fff
 
 .standard-nav-holder
   align-items: center
@@ -129,8 +124,9 @@ li:last-child
 li a
   color: #fff
   font: 
-    size: 0.9rem
-    weight: 600
+    size: .9rem
+    weight: 700
+    family: $font-family-header
   position: relative
   letter-spacing: 2px 
 
@@ -139,7 +135,7 @@ li a::after
   position: absolute
   top: 100%
   left: 0
-  height: 1px
+  height: 2px
   width: 100%
   transform: translatey(10px)
   background: #fff

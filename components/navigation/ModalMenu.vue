@@ -1,48 +1,46 @@
 <template>
-  <transition name="fade">
-    <section class="modal-menu content-block">
-      <div class="container">
-        <div class="row">
-          <div class="column col-12">
-            <ul class="mobile-nav-holder">
-              <li>
-                <router-link class="page-link" to="/work">Work</router-link>
-              </li>
-              <li class="margined">
-                <router-link class="page-link" to="/services">Services</router-link>
-              </li>
-              <li class="margined">
-                <router-link class="page-link" to="/insights">Insights</router-link>
-              </li>
-              <li class="margined">
-                <router-link class="page-link" to="/careers">Careers</router-link>
-              </li>
-              <li class="margined">
-                <router-link class="page-link" to="/contact">Contact</router-link>
-              </li>
-            </ul>
-            <ul class="social-link-holder">
-              <li>
-                <a class="social-link" href="#">
-                  <!-- <img src="../assets/logo/linkedin.svg" alt="LinkedIn"> -->
-                </a>
-              </li>
-              <li>
-                <a class="social-link" href="#">
-                  <!-- <img src="../assets/logo/facebook-icon.svg" alt="Facebook"> -->
-                </a>
-              </li>
-              <li>
-                <a class="social-link" href="#">
-                  <!-- <img src="../assets/logo/twitter.svg" alt="Twitter"> -->
-                </a>
-              </li>
-            </ul>
-          </div>
+  <section class="modal-menu content-block">
+    <div class="container">
+      <div class="row">
+        <div class="column col-12">
+          <ul class="mobile-nav-holder">
+            <li>
+              <router-link class="page-link" to="/work">Work</router-link>
+            </li>
+            <li class="margined">
+              <router-link class="page-link" to="/services">Services</router-link>
+            </li>
+            <li class="margined">
+              <router-link class="page-link" to="/insights">Insights</router-link>
+            </li>
+            <li class="margined">
+              <router-link class="page-link" to="/careers">Careers</router-link>
+            </li>
+            <li class="margined">
+              <router-link class="page-link" to="/contact">Contact</router-link>
+            </li>
+          </ul>
+          <ul class="social-link-holder">
+            <li>
+              <a class="social-link" href="#">
+                <!-- <img src="../assets/logo/linkedin.svg" alt="LinkedIn"> -->
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="#">
+                <!-- <img src="../assets/logo/facebook-icon.svg" alt="Facebook"> -->
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="#">
+                <!-- <img src="../assets/logo/twitter.svg" alt="Twitter"> -->
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-  </transition>
+    </div>
+  </section>
 </template>
 
 <script>

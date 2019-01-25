@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div id="__layout-root">
     <ModalMenu/>
     <DarkNav/>
-    <nuxt/>
+    <div class="sections">
+      <nuxt/>
+    </div>
   </div>
 </template>
 

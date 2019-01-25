@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <h1>Hello</h1>
-    <h2>count: {{$store.state.works}}</h2>
-  </div>
+  <div id="__page-root"></div>
 </template>
 
 <script>
