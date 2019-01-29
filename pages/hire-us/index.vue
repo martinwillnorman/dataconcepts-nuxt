@@ -5,27 +5,54 @@
         <div class="fullpage">
           <div class="content-wrapper form-wrapper">
             <form class="text-white" id="my-form" v-on:submit="validateBeforeSubmit">
-              <label for="contact_name">Hello, my name is</label>
+              <label for="name">Hello, my name is</label>
               <span class="input-wrapper">
-                <input type="text" name="contact_name" placeholder="first & last">
+                <input
+                  v-model="name"
+                  v-validate="'required|alpha_spaces'"
+                  data-vv-validate-on="none"
+                  type="text"
+                  name="name"
+                  placeholder="first & last"
+                >
               </span>
               <span>.</span>
-              <label for="contact_address">I'm from</label>
+              <label for="address">I'm from</label>
               <span class="input-wrapper">
-                <input type="text" name="contact_address" placeholder="city, st">
+                <input
+                  v-model="address"
+                  v-validate="'required'"
+                  type="text"
+                  name="address"
+                  placeholder="city, st"
+                >
               </span>
               <span>.</span>
-              <label for="contact_phone">You can reach me on my phone at</label>
+              <label for="phone number">You can reach me on my phone at</label>
               <span class="input-wrapper">
-                <input type="text" name="contact_phone" placeholder="xxx xxx xxxx">
+                <input
+                  v-model="phone"
+                  v-validate="{ required: true, regex: ^[\d\s]+$}"
+                  data-vv-validate-on="none"
+                  type="text"
+                  name="phone number"
+                  placeholder="xxxxxxxxxx"
+                >
               </span>
-              <label for="contact_email">or via email at</label>
+              <label for="email">or via email at</label>
               <span class="input-wrapper">
-                <input type="text" name="contact_email" placeholder="your@email.com">
+                <input
+                  v-model="email"
+                  v-validate="'required|email'"
+                  data-vv-validate-on="none"
+                  type="text"
+                  name="email"
+                  placeholder="your@email.com"
+                >
               </span>
               <span>.</span>
             </form>
-            <button>
+            <button v-on:click="validateBeforeSubmit">
               <span class="work-arrow">
                 <svg
                   class="arrow-thin-right__svg"
@@ -49,6 +76,9 @@
                 </svg>
               </span>
             </button>
+            <ul class="pseudo errors-list text-white">
+              <li class="error" v-for="error in errors.all()" v-bind:key="error">{{ error }}</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -58,7 +88,43 @@
 
 <script>
 export default {
-  layout: "light"
+  layout: "light",
+  data() {
+    return {
+      name: "",
+      address: "",
+      email: "",
+      phone: ""
+    };
+  },
+  methods: {
+    validateBeforeSubmit(e) {
+      e.preventDefault();
+
+      this.$validator.validateAll().then(res => {
+        if (res) {
+          return this.submitForm();
+        }
+        console.log("incorrect!");
+      });
+    },
+    async submitForm() {
+      try {
+        await this.$axios.$post("", {
+          name: this.name,
+          address: this.address,
+          email: this.email,
+          phone: this.phone
+        });
+        await new Promise(
+          resolve => console.log(resolve),
+          setTimeout(resolve, 2500)
+        );
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  }
 };
 </script>
 
@@ -138,5 +204,16 @@ button
     background-color: #fff
     &:hover
         background-color: $link-color
+
+.errors-list 
+  position: absolute
+  bottom: 120px
+  padding: 0
+  
+.error
+  font:
+    size: 1rem
+  line-height: 18px
+  margin-bottom: 15px
 
 </style>

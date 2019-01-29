@@ -8,7 +8,7 @@
             <form id="my-form" v-on:submit="validateBeforeSubmit">
               <input
                 class="input light-grey"
-                v-model="subscription"
+                v-model="subscription.email"
                 v-validate="'required|email'"
                 type="text"
                 name="email"
@@ -50,12 +50,15 @@
 export default {
   data() {
     return {
-      subscription: ""
+      subscription: {
+        email: ""
+      }
     };
   },
   methods: {
     validateBeforeSubmit(e) {
       e.preventDefault();
+      console.log("submission attempt");
 
       this.$validator.validateAll().then(res => {
         if (res) {

@@ -24,6 +24,10 @@ module.exports = {
     ]
   },
 
+  env: {
+    baseUrl: process.env.BASE_URL || "https://localhost:3000"
+  },
+
   router: {
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {
@@ -33,12 +37,23 @@ module.exports = {
       }
     }
   },
+
+  plugins: [
+    { src: "~/plugins/aos", ssr: false },
+    { src: "~/plugins/vee-validate.js", ssr: true },
+    { src: "~/plugins/swiper.js", ssr: false }
+  ],
   /*
    ** Customize the progress bar color
    */
   loading: { color: "#3B8070" },
 
-  modules: [["nuxt-sass-resources-loader", "assets/css/base/_variables.sass"]],
+  modules: [
+    ["nuxt-sass-resources-loader", "assets/css/base/_variables.sass"],
+    ["@nuxtjs/axios", { baseURL: "/api/contact" }]
+  ],
+
+  serverMiddleware: ["~/api/contact"],
   /*
    ** Build configuration
    */
@@ -56,10 +71,5 @@ module.exports = {
         });
       }
     }
-  },
-  plugins: [
-    { src: "~/plugins/aos", ssr: false },
-    { src: "~/plugins/vee-validate.js", ssr: true },
-    { src: "~/plugins/swiper.js", ssr: false }
-  ]
+  }
 };
