@@ -2,36 +2,34 @@
   <header id="header" v-bind:class="{hidden: scrolled}">
     <div class="container">
       <nav data-aos="fade-down" data-aos-duration="500">
-        <div class="nav__content">
-          <nuxt-link class="logo" v-bind:class="{ active: showMobileMenu }" to="/">dataconcepts</nuxt-link>
-          <div class="link-container">
-            <ul class="standard-nav-holder pseudo">
-              <li>
-                <nuxt-link v-on:click.native="myFilter" to="/work">Work</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/services">Services</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/insights">Insights</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/about">About</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/careers">Careers</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/contact">Contact</nuxt-link>
-              </li>
+        <nuxt-link class="logo" v-bind:class="{ active: showMobileMenu }" to="/">dataconcepts</nuxt-link>
+        <div class="menu-wrap">
+          <ul class="menu pseudo">
+            <li class="menu-item">
+              <nuxt-link class="nav-link" v-on:click.native="myFilter" to="/work">Work</nuxt-link>
+            </li>
+            <li class="menu-item">
+              <nuxt-link class="nav-link" to="/services">Services</nuxt-link>
+            </li>
+            <li class="menu-item">
+              <nuxt-link class="nav-link" to="/insights">Insights</nuxt-link>
+            </li>
+            <li class="menu-item">
+              <nuxt-link class="nav-link" to="/about">About</nuxt-link>
+            </li>
+            <li class="menu-item">
+              <nuxt-link class="nav-link" to="/careers">Careers</nuxt-link>
+            </li>
+            <li class="menu-item">
+              <nuxt-link class="nav-link" to="/contact">Contact</nuxt-link>
+            </li>
+          </ul>
+          <a class="target-burger" v-on="{ click: myFilter}">
+            <ul class="buns">
+              <li class="bun" v-bind:class="{ active: showMobileMenu}"></li>
+              <li class="bun" v-bind:class="{ active: showMobileMenu}"></li>
             </ul>
-            <a class="target-burger" v-on="{ click: myFilter}">
-              <ul class="buns">
-                <li class="bun" v-bind:class="{ active: showMobileMenu}"></li>
-                <li class="bun" v-bind:class="{ active: showMobileMenu}"></li>
-              </ul>
-            </a>
-          </div>
+          </a>
         </div>
       </nav>
     </div>
@@ -93,56 +91,41 @@ nav
 .hidden 
   transform: translate(0, -80px)
   
-.nav__content
-  flex: auto
-  display: flex
-  justify-content: space-between
-  align-items: center
-
 .logo 
   color: #fff
   font:
-    size: 1.5rem
-    weight: 700
+    size: 1.3rem
+    weight: 400
     family: $font-family-header
+  letter-spacing: 4px 
+  padding-top: 4px
 
 .logo.active
   color: #000
 
-.standard-nav-holder
-  align-items: center
-  height: 100%
-  list-style: none
-  position: relative
-
-li
-  margin-right: 40px
-
-li:last-child 
-  margin-right: 0
-
-li a
-  color: #fff
+.nav-link
+  color: #fff !important
+  text-transform: uppercase
   font: 
-    size: .9rem
+    size: .8rem
     weight: 700
     family: $font-family-header
   position: relative
   letter-spacing: 2px 
 
-li a::after
+.nav-link::after
   content: ""
   position: absolute
   top: 100%
   left: 0
-  height: 2px
+  height: 1px
   width: 100%
   transform: translatey(10px)
   background: #fff
   opacity: 0
   transition: transform 400ms cubic-bezier(.29,.29,.42,1.01), opacity 600ms ease-in-out, color 600ms ease-in-out
 
-li a:hover:after 
+.nav-link:hover:after 
   opacity: 1
   transform: translatey(2px)
 
@@ -186,7 +169,7 @@ li a:hover:after
   background-color: #000
     
 @media only screen and (min-width: 0) 
-  .standard-nav-holder
+  .menu
     display: none
 
   .target-burger
@@ -196,7 +179,7 @@ li a:hover:after
   .target-burger
     display: none
 
-  .standard-nav-holder
+  .menu
     display: flex
-  
+
 </style>

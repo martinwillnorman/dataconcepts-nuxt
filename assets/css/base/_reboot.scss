@@ -157,6 +157,7 @@ ul ol {
 
 ul.pseudo {
   margin-bottom: 0;
+  list-style: none;
 }
 
 dt {
@@ -217,26 +218,6 @@ a {
 
   &:hover {
   }
-}
-
-.regular-link::after {
-  content: "";
-  background: #000;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  -webkit-transform: translatey(10px);
-  transform: translatey(10px);
-  opacity: 0;
-  transition: transform 400ms cubic-bezier(0.29, 0.29, 0.42, 1.01),
-    opacity 600ms ease-in-out, color 600ms ease-in-out;
-}
-
-.regular-link:hover::after {
-  opacity: 1;
-  transform: translatey(2px);
 }
 
 // And undo these styles for placeholder links/named anchors (without href)

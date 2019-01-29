@@ -1,5 +1,9 @@
 module.exports = {
-  css: ["@/assets/css/style.sass"],
+  css: [
+    "@/assets/css/style.sass",
+    "aos/dist/aos.css",
+    "swiper/dist/css/swiper.css"
+  ],
   /*
    ** Headers of the page
    */
@@ -14,19 +18,27 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         href:
-          "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Quattrocento+Sans:400,700",
+          "https://fonts.googleapis.com/css?family=Heebo:400,500,700|Quattrocento+Sans:400,700",
         rel: "stylesheet"
       }
     ]
+  },
+
+  router: {
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition;
+      } else {
+        return { x: 0, y: 0 };
+      }
+    }
   },
   /*
    ** Customize the progress bar color
    */
   loading: { color: "#3B8070" },
 
-  modules: [
-    ["nuxt-sass-resources-loader", ["assets/css/base/_variables.sass"]]
-  ],
+  modules: [["nuxt-sass-resources-loader", "assets/css/base/_variables.sass"]],
   /*
    ** Build configuration
    */
@@ -44,5 +56,10 @@ module.exports = {
         });
       }
     }
-  }
+  },
+  plugins: [
+    { src: "~/plugins/aos", ssr: false },
+    { src: "~/plugins/vee-validate.js", ssr: true },
+    { src: "~/plugins/swiper.js", ssr: false }
+  ]
 };
