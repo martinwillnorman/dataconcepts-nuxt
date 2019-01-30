@@ -15,9 +15,9 @@ export default {
   data() {
     return {
       banners: [
-        "/slide-images/staff-1.jpg",
-        "/slide-images/Dan-Watson.jpg",
-        "/slide-images/Dan-Watson.jpg"
+        "/slideshow/staff-1.jpg",
+        "/slideshow/Dan-Watson.jpg",
+        "/slideshow/Dan-Watson.jpg"
       ],
       swiperOption: {
         loop: false,

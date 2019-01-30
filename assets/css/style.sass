@@ -169,15 +169,16 @@ ul.pseudo
 .regular-link
   font: 
     size: 0.9rem
-    weight: 600
+    weight: 700
   position: relative
   letter-spacing: 0.5px 
   display: inline-block
   margin-top: 15px
+  color: $font-color-bluish-grey
 
 .regular-link::after
   content: ""
-  background: #000
+  background: $font-color-bluish-grey
   position: absolute
   top: 100%
   left: 0
@@ -213,6 +214,12 @@ ul.pseudo
 .padded-xxlarge
   padding: 300px 0
 
+.subsection-padding
+  padding-bottom: 60px
+
+.padded-top
+  padding-top: 140px
+
 // Background Color
 
 .black
@@ -223,6 +230,18 @@ ul.pseudo
 
 .light-grey
   background: $background-color-light-grey
+
+.medium-grey
+  background: $background-color-medium-grey
+
+.gradient-1
+  background: $background-gradient-pink
+
+.gradient-2
+  background: $background-gradient-blue
+
+.gradient-3
+  background: $background-gradient-green
 
 // Slant 
 
@@ -313,26 +332,33 @@ ul.pseudo
   position: relative
   text-align: center
 
+.section-title::after
+  content: ""
+  height: 2px
+  width: 77px
+  background: $font-color-subtitle
+  position: absolute
+  bottom: -10px
+  left: 50%
+  transform: translate(-50%, 0)
+
 .section-title.medium
   margin-bottom: 40px
 
 .section-title.short
   margin-bottom: 20px
 
+.section-title.left
+  text-align: left
+
+.section-title.left::after
+  left: 10px
+  transform: unset
+
 .section-subtitle
   text-transform: uppercase
   letter-spacing: 3px
   color: $font-color-subtitle
-
-.section-title::after
-  content: ""
-  height: 2px
-  width: 77px
-  background: $link-color
-  position: absolute
-  bottom: -10px
-  left: 50%
-  transform: translate(-50%, 0)
 
 .section-kicker
   margin: 0 auto
@@ -366,20 +392,17 @@ ul.pseudo
 
 .subtitle.white > span::before
   background: #fff
+
+.subtitle.center > span::before
+  right: 50%
+  transform: translate(50%, 0)
   
-
-hr.subtitle
-  width: 175px
-  background-color: transparent
-  display: block
-  border: 0
-  border-top: solid 1px #000
-  margin: 0 0 15px
-  height: 0
-  padding: 0
-
-hr.subtitle.white
-  border-color: #fff
+.line
+  width: 1px
+  height: 30px
+  border-left: 2px solid $link-color
+  margin: 40px auto
+  transition: 0.9s cubic-bezier(0.18, 1, 0.21, 1)
 
 // Hero
 

@@ -35,15 +35,15 @@ h3
     font:
         size: 4rem
     line-height: 1
-    max-width: 1000px
-
+    max-width: 800px
+    margin-bottom: 20px
 
 p
     font:
         size: 1.8rem
-    line-height: 1.5
+    line-height: 1.2
     letter-spacing: 1px
-    max-width: 500px
+    max-width: 600px
 
 @media only screen and (max-width: 679px)
   .hero-wrapper
