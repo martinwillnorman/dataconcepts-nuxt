@@ -7,8 +7,9 @@
           <div class="row">
             <div class="column col-4">
               <div class="content-wrapper text-white">
-                <hr class="subtitle white">
-                <h6 class="subtitle">who we are</h6>
+                <h6 class="subtitle white">
+                  <span>who we are</span>
+                </h6>
               </div>
             </div>
             <div class="column col-8">
@@ -27,8 +28,9 @@
           <div class="row">
             <div class="column col-4">
               <div class="content-wrapper">
-                <hr class="subtitle">
-                <h6 class="subtitle">our people</h6>
+                <h6 class="subtitle">
+                  <span>our people</span>
+                </h6>
               </div>
             </div>
             <div class="column col-12">
@@ -97,8 +99,9 @@
           <div class="row">
             <div class="column col-4">
               <div class="content-wrapper">
-                <hr class="subtitle">
-                <h6 class="subtitle">partners</h6>
+                <h6 class="subtitle">
+                  <span>partners</span>
+                </h6>
               </div>
             </div>
             <div class="column col-12">

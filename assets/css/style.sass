@@ -161,6 +161,11 @@ section
   max-width: 8.33333%
   flex-basis: 8.33333%
 
+ul.pseudo 
+  margin-bottom: 0
+  list-style: none
+  padding-left: 0
+
 .regular-link
   font: 
     size: 0.9rem
@@ -319,6 +324,16 @@ section
   letter-spacing: 3px
   color: $font-color-subtitle
 
+.section-title::after
+  content: ""
+  height: 2px
+  width: 77px
+  background: $link-color
+  position: absolute
+  bottom: -10px
+  left: 50%
+  transform: translate(-50%, 0)
+
 .section-kicker
   margin: 0 auto
   max-width: 1000px
@@ -329,11 +344,29 @@ section
 
 .subtitle
   margin-bottom: 30px
+  margin-top: 14px
+
+.subtitle > span
+  position: relative
   letter-spacing: 3px
   color: #aaaaaaa
   text-transform: uppercase
   font:
     weight: 500
+
+.subtitle > span::before
+  content: ""
+  position: absolute
+  top: -13px
+  height: 1px
+  background: #000
+  width: 170%
+  max-width: 200px
+  min-width: 100px
+
+.subtitle.white > span::before
+  background: #fff
+  
 
 hr.subtitle
   width: 175px
@@ -357,3 +390,31 @@ hr.subtitle.white
   bottom: 0
   left: 0
 
+.cover-image
+  width: 100%
+  height: 100%
+  position: absolute
+  overflow: hidden
+  top: 0
+  left: 0
+  right: 0
+  background-size: cover
+  background-attachment: scroll
+  background-color: transparent
+
+.cover-image.tinted::before
+  content: ""
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0,0,0,0.2)
+
+
+
+@media only screen and (max-width: 690px)
+  .column.responsive-12
+    width: 100%
+    max-width: 100%
+    flex-basis: 100%

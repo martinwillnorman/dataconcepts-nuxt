@@ -7,8 +7,9 @@
           <div class="row">
             <div class="column col-4">
               <div class="content-wrapper text-white">
-                <hr class="subtitle white">
-                <h6 class="subtitle">contact</h6>
+                <h6 class="subtitle white">
+                  <span>contact</span>
+                </h6>
               </div>
             </div>
             <div class="column col-8">
