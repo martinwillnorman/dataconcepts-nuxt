@@ -7,8 +7,9 @@
           <div class="row">
             <div class="column col-4">
               <div class="content-wrapper text-white">
-                <hr class="subtitle white">
-                <h6 class="subtitle">perks</h6>
+                <h6 class="subtitle white">
+                  <span>perks</span>
+                </h6>
               </div>
             </div>
             <div class="column col-12">
@@ -27,8 +28,9 @@
           <div class="row">
             <div class="column col-3">
               <div class="content-wrapper">
-                <hr class="subtitle">
-                <h6 class="subtitle">current openings</h6>
+                <h6 class="subtitle">
+                  <span>current openings</span>
+                </h6>
               </div>
             </div>
             <div class="column col-9">

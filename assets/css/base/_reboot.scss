@@ -107,6 +107,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: $font-family-header;
+  line-height: 1.2;
 }
 
 // Reset margins on paragraphs
@@ -117,6 +118,7 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
   font-family: $font-family-copy;
+  line-height: $line-height-base;
 }
 
 // Abbreviations
@@ -153,11 +155,6 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
-}
-
-ul.pseudo {
-  margin-bottom: 0;
-  list-style: none;
 }
 
 dt {
