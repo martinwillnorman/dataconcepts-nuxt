@@ -36,7 +36,7 @@ module.exports = {
   /*
    ** Customize the progress bar color
    */
-  loading: { color: "#3B8070" },
+  loading: { color: "#A07A2E" },
 
   modules: [["nuxt-sass-resources-loader", "assets/css/base/_variables.sass"]],
   /*

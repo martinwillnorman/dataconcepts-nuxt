@@ -38,7 +38,6 @@ export default {
 .subcapability-text
   font-size: 1rem
   font-weight: 400
-  line-height: 1.4
 
 .subcapability-wrapper
   display: flex

@@ -36,7 +36,8 @@ h3
         size: 4rem
     line-height: 1
     max-width: 800px
-    margin-bottom: 20px
+    margin-bottom: 10px
+    letter-spacing: 2px
 
 p
     font:

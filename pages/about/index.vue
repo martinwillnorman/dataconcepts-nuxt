@@ -1,7 +1,7 @@
 <template>
   <div class="__page-root">
     <RootHero title="Identity."/>
-    <div class="sections">
+    <div data-aos="fade-up" class="sections">
       <section class="padded-large black">
         <div class="container">
           <div class="row">
@@ -13,7 +13,7 @@
               </div>
             </div>
             <div class="column col-8">
-              <div data-aos="fade-up" class="content-wrapper text-white">
+              <div class="content-wrapper text-white">
                 <h1 class="about-us-header">We grow businesses by creating experiences people love.</h1>
                 <p
                   class="about-us-text"
@@ -23,7 +23,7 @@
           </div>
         </div>
       </section>
-      <section class="padded-large">
+      <section data-aos="fade-up" class="padded-large">
         <div class="container">
           <div class="row">
             <div class="column col-4">
@@ -34,14 +34,14 @@
               </div>
             </div>
             <div class="column col-12">
-              <div data-aos="fade-up" class="copy-wrapper">
+              <div class="copy-wrapper">
                 <h1 class="staff-header">Technologists, Strategists, Creatives, & Engineers.</h1>
               </div>
             </div>
           </div>
           <div class="row staff-row">
             <div class="column col-12">
-              <div data-aos="fade-up" class="content-wrapper staff-wrapper">
+              <div class="content-wrapper staff-wrapper">
                 <StaffMember
                   position="Cyber Security Architect"
                   name="Sean"
@@ -91,7 +91,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section data-aos="fade-up">
         <Swiper/>
       </section>
       <section class="padded-large">
@@ -105,7 +105,7 @@
               </div>
             </div>
             <div class="column col-12">
-              <div data-aos="fade-up" class="content-wrapper partners-wrapper">
+              <div class="content-wrapper partners-wrapper">
                 <div class="partner">
                   <img class="partner-image" src="~assets/image/partner/aws.png" alt="partner logo">
                 </div>

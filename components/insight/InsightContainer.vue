@@ -105,7 +105,7 @@ export default {
   font:
     size: 1rem
     weight: 600 
-  line-height: 1.8
+  line-height: 1.5
 
 .read-more 
   position: absolute 

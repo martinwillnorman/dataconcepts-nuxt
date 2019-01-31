@@ -19,11 +19,11 @@
       </div>
     </div>
     <div class="sections">
-      <section class="padded-xxlarge">
+      <section data-aos="fade-up" class="padded-xxlarge">
         <div class="container">
           <div class="row">
             <div class="column col-12 center-content">
-              <div data-aos="fade-up" class="copy-wrapper">
+              <div class="copy-wrapper">
                 <h6 class="section-subtitle">who we are</h6>
                 <h1 class="section-title short">Technology is our craft.</h1>
                 <p
@@ -34,11 +34,11 @@
           </div>
         </div>
       </section>
-      <section class="padded-xxlarge black">
+      <section data-aos="fade-up" class="padded-xxlarge black">
         <div class="container">
           <div class="row">
             <div class="column col-12 center-content">
-              <div data-aos="fade-up" class="copy-wrapper dynamic-text-wrapper text-white">
+              <div class="copy-wrapper dynamic-text-wrapper text-white">
                 <h3>Need help</h3>
                 <h3 id="dynamic-text"></h3>
                 <h3>We're Here For You.</h3>
@@ -47,7 +47,7 @@
           </div>
         </div>
       </section>
-      <section class="padded-large">
+      <section data-aos="fade-up" class="padded-xlarge" style="display: block">
         <div class="container">
           <div class="row">
             <div class="column col-12">
@@ -58,8 +58,47 @@
             </div>
           </div>
         </div>
+        <div class="content-wrapper services-wrapper">
+          <div class="service">
+            <nuxt-link class="service-link" to="/services/big-data"></nuxt-link>
+            <div id="big-data-bround" class="service-background"></div>
+            <div class="service-content">
+              <h3 class="service-title">Big Data</h3>
+            </div>
+          </div>
+          <div class="service">
+            <nuxt-link class="service-link" to="/services/iot"></nuxt-link>
+            <div id="iot-bround" class="service-background"></div>
+            <div class="service-content">
+              <h3 class="service-title">IoT</h3>
+            </div>
+          </div>
+          <div class="service">
+            <nuxt-link class="service-link" to="/services/cloud"></nuxt-link>
+            <div id="cloud-bround" class="service-background"></div>
+            <div class="service-content">
+              <h3 class="service-title">Cloud</h3>
+            </div>
+          </div>
+          <div class="service">
+            <nuxt-link class="service-link" to="/services/business-intelligence"></nuxt-link>
+            <div id="bi-bround" class="service-background"></div>
+            <div class="service-content">
+              <h3 class="service-title">Business Intelligence</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="column col-12">
+              <div class="copy-wrapper see-more-wrapper">
+                <nuxt-link class="see-more-link" to="/services">See More</nuxt-link>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="padded-large black">
+      <section data-aos="fade-up" class="padded-large black">
         <div class="container">
           <div class="row">
             <div class="column col-12">
@@ -67,12 +106,44 @@
                 <h6 class="section-subtitle">our insights</h6>
                 <h1 class="section-title short text-white">Trends that inform the world of tomorrow.</h1>
                 <p class="section-kicker">Digital transformation demands new approaches.</p>
-                <nuxt-link class="regular-link white" to="/services/digital-strategy">More</nuxt-link>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column col-12">
+              <div class="content-wrapper insights-wrapper" style="margin-top: 40px">
+                <InsightContainer
+                  title="A Quick Peek in to  Data Strategy"
+                  summary="Every business and organisation has its own unique set of goals, KPIs and targets, and we believe that everything that we do should be devised, planned and executed with these objectives in mind."
+                  category="Data Strategy"
+                  link="/insights/quick-peek"
+                  imgsrc="/insight/dance-2.jpg"
+                />
+                <InsightContainer
+                  link="/insights/blockchain-world"
+                  category="Blockchain"
+                  title="Our Insights on the World of Blockchain"
+                  summary="Blockchain is one of the most dynamic inventions of this century. Though this revolutionary technology is still in its infancy, it has the potential to change how the world works."
+                  imgsrc="/insight/bridge.jpg"
+                />
+                <InsightContainer
+                  link="/insights/data-mining"
+                  category="Big Data"
+                  title="Extracting Actionable Insights from Data"
+                  summary="Data mining is the extraction of actionable insights from data."
+                  imgsrc="/insight/entry.jpg"
+                />
+              </div>
+            </div>
+            <div class="column col-12">
+              <div class="copy-wrapper see-more-wrapper">
+                <nuxt-link class="white see-more-link" to="/insights">See More</nuxt-link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <Subscribe/>
       <HireUsFooter/>
     </div>
@@ -83,13 +154,15 @@
 import HeroArrow from "../components/arrow/HeroArrow.vue";
 import Subscribe from "../components/form/Subscribe.vue";
 import HireUsFooter from "../components/footer/HireUsFooter.vue";
+import InsightContainer from "../components/insight/InsightContainer.vue";
 
 export default {
   layout: "light",
   components: {
     HeroArrow,
     Subscribe,
-    HireUsFooter
+    HireUsFooter,
+    InsightContainer
   },
   data() {
     return {
@@ -267,8 +340,6 @@ canvas
 #canvas-wrapper
   background-color: #000
 
-
-
 .hero-title
   font:
     size: 5.5rem
@@ -309,4 +380,52 @@ canvas
     top: 50%
     transform: translate(0, -50%)
 
+.see-more-wrapper
+  padding: 20px 0 0
+
+.see-more-link
+  font: 
+    size: 1.2rem
+    weight: 700
+    family: $font-family-header
+  position: relative
+  letter-spacing: 2px 
+  display: inline-block
+  margin-top: 15px
+  color: #000
+
+.see-more-link::after
+  content: ""
+  background: #000
+  position: absolute
+  top: 100%
+  left: 0
+  height: 2px
+  width: 100%
+  -webkit-transform: translatey(10px)
+  transform: translatey(10px)
+  opacity: 0
+  transition: transform 400ms cubic-bezier(0.29, 0.29, 0.42, 1.01), opacity 600ms ease-in-out, color 600ms ease-in-out
+
+.see-more-link:hover:after
+  opacity: 1
+  transform: translatey(2px)
+
+.see-more-link.white
+  color: #fff
+
+.see-more-link.white::after
+  background: #fff
+
+#big-data-bround
+  background-image: url(~assets/image/service/big-data.jpg)
+
+#iot-bround
+  background-image: url(~assets/image/service/iot.jpg)
+
+#cloud-bround
+  background-image: url(~assets/image/service/cloud.jpg)
+
+#bi-bround
+  background-image: url(~assets/image/service/bi.jpg)
 </style>

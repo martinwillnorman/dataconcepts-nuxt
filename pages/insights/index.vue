@@ -2,12 +2,12 @@
   <div class="__page-root">
     <RootHero title="Expertise."/>
     <div class="sections">
-      <section class="black">
+      <section data-aos="fade-up" class="black" style="padding-bottom: 140px">
         <div class="container">
           <Spacer/>
           <div class="row">
             <div class="column col-12">
-              <div data-aos="fade-up" class="copy-wrapper text-wrapper text-white">
+              <div class="copy-wrapper text-wrapper text-white">
                 <p
                   class="insights-text"
                 >We think it's important to provide our clients with key insights into the solutions that could help your business succeed.</p>
@@ -282,45 +282,9 @@ export default {
 
 <style lang="sass" scoped>
 
-.insights-wrapper
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-
 .text-wrapper
   max-width: 800px
   margin: 0 auto
   padding-bottom: 80px
-
-.insights-text
-  font: 
-    size: 32px
-    weight: 300
-  line-height: 1.4
-
-@media only screen and (max-width: 870px)
-  .insights-header 
-    font-size: 110px
-    line-height: 130px
-
-@media only screen and (max-width: 600px)
-  .insights-header 
-    font-size: 80px
-    line-height: 1.2
-
-@media only screen and (max-width: 450px)
-  .insights-wrapper
-    padding-top: 60px
-
-  .insights-header 
-    font-size: 60px
-    letter-spacing: 1px
-
-  .insights-text
-    font-size: 20px
-
-@media only screen and (max-width: 340px)
-  .insights-header 
-    font-size: 50px
 
 </style>

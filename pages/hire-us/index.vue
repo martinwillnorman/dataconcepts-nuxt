@@ -25,7 +25,7 @@
               </span>
               <span>.</span>
             </form>
-            <button>
+            <button class="box-button">
               <span class="work-arrow">
                 <svg
                   class="arrow-thin-right__svg"
